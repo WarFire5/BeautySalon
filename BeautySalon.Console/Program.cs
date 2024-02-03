@@ -27,7 +27,13 @@ class Program
         {
             Console.WriteLine($"{user.Id} {user.Name} {user.Phone} {user.Mail} {user.Roles}");
         }
-        Console.WriteLine();
+        // IIntervalsRepository intervalsRepository = new IntervalsRepository();
+        // var intervalsRepositories = intervalsRepository.GetAllShiftsWithFreeIntervalsOnCurrentService();
+        // foreach (var user in userRepositories)
+        // {
+        //     Console.WriteLine($"{user.Id} {user.Name} {user.Phone} {user.Mail} {user.Roles}");
+        // }
+        // Console.WriteLine();
         Console.ReadLine();
     }
 
