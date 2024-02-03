@@ -9,11 +9,11 @@ namespace BeautySalon.DAL.Repositories;
 
 public class IntervalsRepository:IIntervalsRepository
 {
-    public List<IntеrvalsDTO> GetAllShiftsWithFreeIntervalsOnCurrentService()
+    public List<IntеrvalsDTO> GetAllShiftsWithFreeIntervalsOnCurrentService(int serviceId)
     {
         using (IDbConnection connection = new SqlConnection(Options.ConnectionString))
         {
-            var parameters = new {Id = 4};
+            var parameters = new {ServiceId = serviceId};
             return connection.Query<IntеrvalsDTO>(Procedures.GetAllShiftsWithFreeIntervalsOnCurrentService,parameters).ToList();
         }
     }

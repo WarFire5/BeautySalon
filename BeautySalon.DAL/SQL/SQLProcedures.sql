@@ -18,7 +18,7 @@ go
 create proc GetClientByNameAndPhone
     @Name nvarchar(50), @Phone nvarchar(30) as
 begin
-    select Users.Name as Client, Users.Phone as ClientsPhone from Users
+    select Users.Name as Name, Users.Phone as Phone from Users
     where Users.Name = @Name and Users.Phone = @Phone
 end
 go
